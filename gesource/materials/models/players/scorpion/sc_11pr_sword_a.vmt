@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/scorpion/SC_11PR_Sword_A"
+$bumpmap "models/scorpion/SC_11PR_Sword_N"
+}

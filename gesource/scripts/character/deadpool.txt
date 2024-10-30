@@ -1,0 +1,20 @@
+"deadpool"
+{
+	"printname"		"#GE_DEADPOOL"
+	"shortname"		"#GE_DEADPOOL_CONCISE"
+	"team"			"MI6"
+	"gender"		"m"
+	"weight"		"15"
+
+	"bio"			"#GE_CharBio_Deadpool"
+
+	"skins"
+	{
+		"suit"
+		{
+			"model"			"models/players/deadpool/deadpool.mdl"
+			"worldmodelskin"	"0"
+			"viewmodelskin"		"0"
+		}
+	}
+}

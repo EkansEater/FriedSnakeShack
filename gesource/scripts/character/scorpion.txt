@@ -1,0 +1,20 @@
+"scorpion"
+{
+	"printname"		"Scorpion"
+	"shortname"		"Scorpion"
+	"team"			"Janus"
+	"gender"		"m"
+	"weight"		"15"
+
+	"bio"			"Scorpion"
+
+	"skins"
+	{
+		"sc_11pr_1_n"
+		{
+			"model"			"models/player/scorpion/Scorpionmk11/scorpionmk11.mdl"
+			"worldmodelskin"	"0"
+			"viewmodelskin"		"0"
+		}
+	}
+}
