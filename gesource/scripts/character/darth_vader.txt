@@ -1,0 +1,20 @@
+"darth_vader"
+{
+	"printname"		"Darth Vader"
+	"shortname"		"Darth Vader"
+	"team"			"Janus"
+	"gender"		"m"
+	"weight"		"18"
+
+	"bio"			"Darth Vader"
+
+	"skins"
+	{
+		"vaderbody_c"
+		{
+			"model"			"models/player/darth_vader.mdl"
+			"worldmodelskin"	"0"
+			"viewmodelskin"		"0"
+		}
+	}
+}

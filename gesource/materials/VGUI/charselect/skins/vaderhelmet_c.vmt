@@ -1,0 +1,13 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/player/darthvader/vaderhelmet_c"
+	"$bumpmap" "models/player/darthvader/vaderhelmet_n"
+	"$halflambert" 1
+
+	"$normalmapalphaenvmapmask" 1
+
+	"$phong" "1"
+	"$phongexponent" "5"
+	"$phongboost" "3"
+	"$phongfresnelranges" "[0.1 0.2 0.5]"
+}

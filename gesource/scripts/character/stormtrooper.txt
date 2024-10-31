@@ -1,0 +1,20 @@
+"stormtrooper"
+{
+	"printname"		"Stormtrooper"
+	"shortname"		"Stormtrooper"
+	"team"			"Janus"
+	"gender"		"m"
+	"weight"		"15"
+
+	"bio"			"Stormtrooper"
+
+	"skins"
+	{
+		"ST_W"
+		{
+			"model"			"models/combine_soldier.mdl"
+			"worldmodelskin"	"0"
+			"viewmodelskin"		"0"
+		}
+	}
+}

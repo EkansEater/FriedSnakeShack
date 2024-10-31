@@ -1,0 +1,20 @@
+"batman"
+{
+	"printname"		"Batman"
+	"shortname"		"Batman"
+	"team"			"MI6"
+	"gender"		"m"
+	"weight"		"18"
+
+	"bio"			"Batman"
+
+	"skins"
+	{
+		"batman_torso_d"
+		{
+			"model"			"models/player/bobert/aobm.mdl"
+			"worldmodelskin"	"0"
+			"viewmodelskin"		"0"
+		}
+	}
+}

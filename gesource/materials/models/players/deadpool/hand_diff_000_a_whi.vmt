@@ -1,7 +1,0 @@
-"VertexlitGeneric"
-{
-	"$basetexture" "models/player/deadpool/hand_diff_000_a_whi"
-	"$normalmap" "models/player/deadpool/hand_normal_000"
-	"$surfaceprop" "BloodyFlesh"
-	"$surfaceprop2" "Flesh"
-}

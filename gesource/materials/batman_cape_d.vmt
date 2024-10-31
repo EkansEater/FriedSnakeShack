@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "Batman_Cape_D"
+	"$bumpmap" "Batman_Cape_N"
+	"$alphatest" 1
+}

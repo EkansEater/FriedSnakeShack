@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	"$basetexture"	"models\stormtrooper\ST_B"
+	"$bumpmap" "models\normal_1024"
+}

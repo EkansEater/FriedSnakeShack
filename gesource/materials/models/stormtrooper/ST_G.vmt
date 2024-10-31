@@ -1,0 +1,9 @@
+VertexLitGeneric
+{
+	"$basetexture"	"models\stormtrooper\ST_G"
+	"$bumpmap" "models\normal_1024"
+	"$phong" "1"
+	"$phongexponent" "36"
+	"$phongboost"	"1.0"
+	"$phongfresnelranges"	"[1 1 1]"
+}
