@@ -1,0 +1,57 @@
+<html>
+  <body bgcolor="black" text="white" onload="playIntro()">
+    <embed id="introAudio" src="https://raw.githubusercontent.com/EkansEater/FriedSnakeShack/main/dont_talk_to_the_snake_intro.mp3" hidden="true" autostart="false">
+    
+    <script>
+      var introPlayed = false;
+      function playIntro() {
+        if (!introPlayed) {
+          introPlayed = true;
+
+          var audio = document.getElementById("introAudio");
+          audio.volume = 0.0;
+
+          // Manually fade in
+          var vol = 0.0;
+          var fadeIn = setInterval(function () {
+            vol += 0.05;
+            audio.volume = Math.min(vol, 0.8);
+            if (vol >= 0.8) clearInterval(fadeIn);
+          }, 100);
+
+          // Play immediately (no Promises)
+          try { audio.play(); } catch (e) {}
+
+          // Fade out after 8 seconds
+          setTimeout(function () {
+            var fadeVol = audio.volume;
+            var fadeOut = setInterval(function () {
+              fadeVol -= 0.05;
+              audio.volume = Math.max(fadeVol, 0);
+              if (fadeVol <= 0) {
+                clearInterval(fadeOut);
+                audio.pause();
+              }
+            }, 100);
+          }, 8000);
+        }
+      }
+
+      document.onkeydown = function (e) {
+        if (e.keyCode === 77) { // "M"
+          var audio = document.getElementById("introAudio");
+          audio.pause();
+          audio.currentTime = 0;
+        }
+      };
+    </script>
+
+    <center>
+      <h2>Snake's Barracks</h2>
+      <br/><br/>
+      <h3>Whale cum! I remember when I got my License to Kill.</h3>
+      <h3>Use <b>!mpoptions</b> to access the menu!</h3>
+      <p><i>Click in the box or press <b>M</b> to stop the audio.</i></p>
+    </center>
+  </body>
+</html>

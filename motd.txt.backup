@@ -1,0 +1,63 @@
+<html>
+  <body bgcolor="black" text="white">
+    <audio id="introAudio" hidden>
+      <source src="https://raw.githubusercontent.com/EkansEater/FriedSnakeShack/main/dont_talk_to_the_snake_intro.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("introAudio");
+
+      function playIntroOnce() {
+        if (!sessionStorage.getItem("introPlayed")) {
+          sessionStorage.setItem("introPlayed", "true");
+
+          audio.volume = 0.0;
+          audio.play().then(() => {
+            // Fade in
+            let vol = 0.0;
+            const fadeIn = setInterval(() => {
+              vol += 0.05;
+              audio.volume = Math.min(vol, 0.8);
+              if (vol >= 0.8) clearInterval(fadeIn);
+            }, 100);
+
+            // Fade out after 8 seconds
+            setTimeout(() => {
+              let fadeVol = audio.volume;
+              const fadeOut = setInterval(() => {
+                fadeVol -= 0.05;
+                audio.volume = Math.max(fadeVol, 0);
+                if (fadeVol <= 0) {
+                  clearInterval(fadeOut);
+                  audio.pause();
+                }
+              }, 100);
+            }, 8000);
+          }).catch((err) => {
+            console.warn("Audio play failed:", err);
+          });
+        }
+      }
+
+      // Play after first click anywhere
+      window.addEventListener("click", playIntroOnce, { once: true });
+
+      // Manual stop with "M" key
+      document.addEventListener("keydown", function(event) {
+        if (event.key.toLowerCase() === "m" && !audio.paused) {
+          audio.pause();
+          audio.currentTime = 0;
+          console.log("Intro audio stopped by user.");
+        }
+      });
+    </script>
+
+    <center>
+      <h2>Snake's Barracks</h2>
+      <br/><br/>
+      <h3>Whale cum! I remember when I got my License to Kill.</h3>
+      <h3>Use <b>!mpoptions</b> to access the menu!</h3>
+      <p><i>Click anywhere to hear the intro. Press <b>M</b> to stop the audio.</i></p>
+    </center>
+  </body>
+</html>
